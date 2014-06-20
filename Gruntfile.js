@@ -5,10 +5,14 @@ module.exports = function (grunt) {
     gruntConfig.jasmine = {
         src: {
             src: [
-                'src/**/*.js'
+                'src/**/*.js',
+                '!src/lib/*.js'
             ],
             options: {
                 specs: 'test/**/*.test.js',
+                vendor: [
+                    'src/lib/**/*.js'
+                ],
                 keepRunner: true
             }
         }
